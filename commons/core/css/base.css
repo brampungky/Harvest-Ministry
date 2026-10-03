@@ -1,0 +1,210 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   BASE — reset, elements, and the accessibility floor.
+   Every template inherits WCAG 2.2 AA from here; it is not optional.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--t-base);
+  line-height: var(--leading-body);
+  font-synthesis-weight: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ── Skip link — first focusable element on every page ─────────────────── */
+.skip-link {
+  position: absolute;
+  inset-inline-start: var(--s-4);
+  inset-block-start: -100%;
+  z-index: 999;
+  padding: var(--s-3) var(--s-4);
+  background: var(--accent);
+  color: var(--accent-fg);
+  font-family: var(--font-ui);
+  font-size: var(--t-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition: inset-block-start var(--transition);
+}
+.skip-link:focus { inset-block-start: var(--s-4); }
+
+/* ── Focus: always visible, never removed ──────────────────────────────── */
+:focus-visible {
+  outline: var(--focus);
+  outline-offset: var(--focus-offset);
+}
+:focus:not(:focus-visible) { outline: none; }
+
+/* ── Headings ───────────────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: var(--leading-tight);
+  text-wrap: balance;
+  letter-spacing: -0.012em;
+}
+h1 { font-size: var(--t-3xl); }
+h2 { font-size: var(--t-2xl); }
+h3 { font-size: var(--t-xl);  }
+h4 { font-size: var(--t-lg);  }
+h5 { font-size: var(--t-md);  }
+h6 { font-size: var(--t-base); }
+
+p, ul, ol, dl, blockquote, figure, table, pre { margin: 0; }
+p { text-wrap: pretty; }
+
+/* ── Links: Bootstrap-era underline defaults are wrong for reading text.
+      In prose, links are underlined. In navigation and buttons, they are not. */
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { text-decoration-thickness: 2px; }
+
+/* :not(.btn) matters. Without it this rule beats .btn on specificity and paints
+   a button's label in --accent on an --accent ground — invisible, and only on
+   the buttons that happen to sit inside prose. */
+.prose a:not(.btn) {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* ── Media ──────────────────────────────────────────────────────────────── */
+img, picture, video, svg { max-inline-size: 100%; display: block; }
+img, video { block-size: auto; }
+
+/* Every img must carry width/height attributes; this is the CLS backstop. */
+img[width][height] { block-size: auto; }
+
+figure { margin: 0; }
+figcaption {
+  font-family: var(--font-ui);
+  font-size: var(--t-sm);
+  color: var(--fg-muted);
+  padding-block-start: var(--s-2);
+}
+
+/* ── Forms ──────────────────────────────────────────────────────────────── */
+input, textarea, select, button {
+  font: inherit;
+  color: inherit;
+}
+
+label {
+  display: block;
+  font-family: var(--font-ui);
+  font-size: var(--t-sm);
+  font-weight: 600;
+  margin-block-end: var(--s-2);
+}
+
+input[type="text"], input[type="email"], input[type="tel"],
+input[type="search"], input[type="date"], textarea, select {
+  inline-size: 100%;
+  padding: var(--s-3);
+  background: var(--bg-raised);
+  border: var(--border);
+  border-radius: var(--radius);
+  transition: border-color var(--transition);
+}
+input:focus, textarea:focus, select:focus { border-color: var(--accent); }
+
+/* Bootstrap habit worth breaking: textareas default to a single-row height. */
+textarea { min-block-size: 8rem; resize: vertical; }
+
+/* Required fields marked in text, not by colour alone. */
+.req { color: var(--fg-muted); font-weight: 400; }
+
+/* ── Tables ─────────────────────────────────────────────────────────────── */
+.table-wrap { overflow-x: auto; }
+table { border-collapse: collapse; inline-size: 100%; }
+th, td {
+  text-align: start;
+  padding: var(--s-3);
+  border-block-end: var(--border);
+  vertical-align: top;
+}
+th {
+  font-family: var(--font-ui);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
+  color: var(--fg-muted);
+}
+td.num, .tabular { font-variant-numeric: tabular-nums; }
+
+/* ── Utility ────────────────────────────────────────────────────────────── */
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px; block-size: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip-path: inset(50%);
+  white-space: nowrap; border: 0;
+}
+
+.wrap {
+  inline-size: 100%;
+  max-inline-size: var(--page);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.wrap--narrow { max-inline-size: var(--measure-wide); }
+
+.prose { max-inline-size: var(--measure); }
+.prose > * + * { margin-block-start: var(--s-4); }
+.prose h2, .prose h3 { margin-block-start: var(--s-6); }
+
+.label {
+  font-family: var(--font-ui);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-label);
+  color: var(--fg-muted);
+}
+
+.stack   { display: flex; flex-direction: column; gap: var(--s-4); }
+.stack-6 { display: flex; flex-direction: column; gap: var(--s-6); }
+.row     { display: flex; flex-wrap: wrap; gap: var(--s-4); align-items: center; }
+
+section { padding-block: var(--s-9); }
+
+/* A section following another already sits below that one's bottom padding, so
+   it does not need its own top padding as well. */
+section + section { padding-block-start: 0; }
+
+/* …except after a section that zeroed its own padding. The hero and the Today
+   strip both do, so without this the next section's content butts straight
+   against the bottom edge of the hero image.
+
+   .today is excluded: it is a band, not a section of content, and is meant to
+   sit flush under the hero the way a cathedral site's action bar does. */
+.hero + section:not(.today),
+.today + section { padding-block-start: var(--s-9); }
+
+/* ── Motion ─────────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Print — churches print their own pages more than most sites ───────── */
+@media print {
+  .site-nav, .site-footer__meta, .skip-link, .theme-toggle { display: none; }
+  body { background: #fff; color: #000; font-size: 11pt; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; }
+}

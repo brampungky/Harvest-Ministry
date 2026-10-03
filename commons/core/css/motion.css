@@ -1,0 +1,118 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   MOTION — the layer that was missing.
+
+   Every template in this system was completely static. Not restrained: static.
+   Nothing settled in, nothing responded, nothing acknowledged the scroll. That
+   is most of why three genuinely different page architectures still read as
+   three versions of one quiet thing.
+
+   The brief here is *considered*, not showy. Two devices only:
+
+     1. A STAGED OPENING — the first screen settles into place rather than
+        appearing all at once, in the order the eye would read it anyway.
+     2. A SCROLL REVEAL — a block rises very slightly as it enters view.
+
+   Both are opacity and transform only, so they run on the compositor and cost
+   nothing on the ten-year-old laptop in a church office.
+
+   ── Why two implementations ──────────────────────────────────────────────
+   CSS scroll-driven animations are the right mechanism: no JavaScript, the
+   browser drives them, they cannot desynchronise from the scroll position. But
+   support was around 84% in mid-2026 with Firefox still partial, and shipping
+   a flat page to a sixth of visitors defeats the point. So: scroll timelines
+   where supported, a ~15-line IntersectionObserver where not.
+
+   ── Why the fallback can never hide content ──────────────────────────────
+   The classic scroll-reveal failure is `opacity: 0` in the stylesheet and the
+   JavaScript that would undo it never running — leaving a blank page. So the
+   fallback's hiding rule is scoped to `.reveal-js`, a class only the script
+   itself sets, and only after confirming IntersectionObserver exists. No
+   script, no class, no hidden content.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@keyframes rise {
+  from { opacity: 0; transform: translate3d(0, 1.25rem, 0); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes settle {
+  from { opacity: 0; transform: translate3d(0, 0.9rem, 0); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes widen {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* Everything below is inside this query. Reduced motion doesn't get a faster
+   animation — it gets none, and every element sits at its final state. */
+@media (prefers-reduced-motion: no-preference) {
+
+  /* ── 1. The staged opening ────────────────────────────────────────────────
+     Runs once, on load, on the first screen only. `--i` is the position in the
+     sequence; the generator sets it. 90ms apart is enough to read as ordered
+     and not enough to feel like waiting. */
+  [data-enter] {
+    animation: settle 620ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
+    animation-delay: calc(var(--i, 0) * 90ms);
+  }
+
+  /* A rule that draws itself. One per page at most — it is a punctuation mark,
+     not a transition. */
+  [data-enter-rule] {
+    animation: widen 700ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
+    animation-delay: calc(var(--i, 0) * 90ms + 200ms);
+    transform-origin: left center;
+  }
+
+  /* ── 2. The scroll reveal ─────────────────────────────────────────────── */
+  @supports (animation-timeline: view()) {
+    [data-reveal],
+    [data-reveal-children] > * {
+      animation: rise linear both;
+      animation-timeline: view();
+      /* Finished well before the element reaches the middle of the screen.
+         A reveal still running when you are already reading it is a bug that
+         feels like jank. */
+      animation-range: entry 0% entry 65%;
+    }
+  }
+
+  @supports not (animation-timeline: view()) {
+    .reveal-js [data-reveal],
+    .reveal-js [data-reveal-children] > * {
+      opacity: 0;
+      transform: translate3d(0, 1.25rem, 0);
+      transition: opacity 620ms cubic-bezier(0.2, 0.7, 0.3, 1),
+                  transform 620ms cubic-bezier(0.2, 0.7, 0.3, 1);
+    }
+    .reveal-js [data-reveal].is-in,
+    .reveal-js [data-reveal-children] > .is-in {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* ── 3. Interaction detail ────────────────────────────────────────────────
+     The part a static page has none of. Kept to what a pointer actually needs
+     feedback from. */
+  a, button, summary { transition: color 160ms ease, background-color 160ms ease,
+                                   border-color 160ms ease, opacity 160ms ease; }
+
+  /* A plate lifts very slightly under the pointer — 1.5% over 500ms, which
+     reads as the image being an object rather than a decal. */
+  .tip-in img, .paste img, .card img {
+    transition: transform 520ms cubic-bezier(0.2, 0.7, 0.3, 1);
+  }
+  .tip-in:hover img, .paste:hover img, .card:hover img { transform: scale(1.015); }
+}
+
+/* Print never animates, whatever the visitor's motion preference. */
+@media print {
+  [data-enter], [data-enter-rule], [data-reveal], [data-reveal-children] > * {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
