@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get help — Commons Church, Reading PA</title>
+<meta name="description" content="Food pantry, English classes, emergency help with bills, clothing, diapers, recovery and an immigration legal clinic. Free, no ID, English and Spanish.">
+
+<link rel="preload" href="./core/fonts/publicsans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./core/css/fonts.css">
+<link rel="stylesheet" href="./core/css/tokens.css">
+<link rel="stylesheet" href="./core/css/civic.css">
+<link rel="stylesheet" href="./core/css/base.css">
+<link rel="stylesheet" href="./core/css/components.css">
+<link rel="stylesheet" href="./core/css/motion.css">
+<link rel="stylesheet" href="assets/template.css">
+
+<script type="module">
+  const t = localStorage.getItem('theme');
+  if (t) document.documentElement.dataset.theme = t;
+  const l = localStorage.getItem('lang');
+  if (l) document.documentElement.lang = l;
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main" data-en="Skip to content" data-es="Ir al contenido">Skip to content</a>
+<svg class="icon-sprite" aria-hidden="true" focusable="false" width="0" height="0">
+  <symbol id="i-contrast" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M3 12h16M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M6 18L18 6M8 6h10v10"/></symbol>
+  <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="M4 9l8 7 8-7"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4L11 13M18 14v6H4V6h6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.4 7-11a7 7 0 1 0-14 0c0 4.6 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6 3h3.5L11 7.5 8.6 9.2a12.5 12.5 0 0 0 6.2 6.2L16.5 13l4.5 1.5V18a2.5 2.5 0 0 1-2.5 2.5A15.5 15.5 0 0 1 3.5 5.5 2.5 2.5 0 0 1 6 3Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 5h18v14H3zM3 6l9 6.5L21 6"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6.5V12l4 2.5"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M4 6h16v15H4zM4 10.5h16M8.5 3v4M15.5 3v4"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M7 8V3h10v5M4 8h16v8h-3M7 16H4M7 13h10v8H7z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8Z"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 11l5 5 5-5M3 21h18"/></symbol>
+  <symbol id="i-coin" viewBox="0 0 24 24"><path d="M2.5 7h19v10h-19z"/><circle cx="12" cy="12" r="2.6"/><path d="M5.5 7v10M18.5 7v10"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6v15M12 6a5 5 0 0 0-5-3H3v15h4a5 5 0 0 1 5 3 5 5 0 0 1 5-3h4V3h-4a5 5 0 0 0-5 3Z"/></symbol>
+  <symbol id="i-note" viewBox="0 0 24 24"><path d="M9 17V4l11-2v13"/><ellipse cx="6" cy="17.5" rx="3" ry="2.5"/><ellipse cx="17" cy="15.5" rx="3" ry="2.5"/></symbol>
+</svg>
+
+<!-- ── The masthead ──────────────────────────────────────────────────────
+     A painted sign in two tiers. The top one is the building — name, phone,
+     language. A phone number in the header is not decoration here: a lot of
+     the people this church serves would rather ring than read. -->
+<header class="masthead">
+  <div class="masthead__bar">
+    <div class="frame">
+      <a class="masthead__name" href="index.html" data-church="name">Commons Church</a>
+      <div class="masthead__tools">
+        <a class="masthead__phone" href="#" data-church-href="@tel">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span data-church="phone">&nbsp;</span>
+        </a>
+        <div class="lang-toggle" role="group" aria-label="Language / Idioma">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+        <button class="theme-toggle" type="button" aria-label="Switch theme"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-contrast"/></svg></button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="wayfinder" aria-label="Sections">
+    <div class="frame">
+      <button class="wayfinder-toggle" type="button" aria-expanded="false">
+        <svg class="icon icon--menu" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg><svg class="icon icon--close" aria-hidden="true" focusable="false"><use href="#i-close"/></svg>
+        <span data-en="Menu" data-es="Menú">Menu</span>
+      </button>
+      <ul>
+        <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+        <li><a href="help.html" data-en="Get help" data-es="Buscar ayuda">Get help</a></li>
+        <li><a href="timetable.html" data-en="Opening hours" data-es="Horarios">Opening hours</a></li>
+        <li><a href="volunteer.html" data-en="Volunteer" data-es="Voluntariado">Volunteer</a></li>
+        <li><a href="give.html" data-en="Give" data-es="Donar">Give</a></li>
+        <li><a href="sundays.html" data-en="Sundays" data-es="Domingos">Sundays</a></li>
+        <li><a href="about.html" data-en="About us" data-es="Sobre nosotros">About us</a></li>
+        <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<!-- The live board: what is open, right now, in the church's own timezone. -->
+<div class="status">
+  <div class="frame" data-status></div>
+</div>
+
+<main id="main">
+
+
+  <div class="band pagehead">
+    <div class="frame">
+      <p class="band__label" data-en="Get help" data-es="Buscar ayuda">Get help</p>
+      <h1 data-en="Everything we run, and when" data-es="Todo lo que ofrecemos, y cuándo">Everything we run, and when</h1>
+      <p class="pagehead__lede" data-en="Ten things, all free, most of them without an appointment. Filter by what you need." data-es="Diez servicios, todos gratuitos, la mayoría sin cita. Filtre por lo que necesita.">Ten things, all free, most of them without an appointment. Filter by what you need.</p>
+    </div>
+  </div>
+
+  <section class="band" data-reveal>
+    <div class="frame">
+      <div data-directory-filters></div>
+      <div data-directory></div>
+    </div>
+  </section>
+
+  <section class="band band--tint" data-reveal>
+    <div class="frame">
+      <p class="band__label" data-en="Plainly" data-es="Con claridad">Plainly</p>
+      <h2 class="band__title" data-en="What we will and will not ask you" data-es="Lo que preguntamos y lo que no">What we will and will not ask you</h2>
+      <div class="plainly">
+        <div>
+          <h3 data-en="No paperwork" data-es="Sin papeleo">No paperwork</h3>
+          <p data-en="No ID, no proof of address, no proof of income for the pantry, the clothing room or the meal. Bring the bill for help with bills — that is all." data-es="Sin identificación, sin comprobante de domicilio ni de ingresos para la despensa, el ropero o la cena. Para ayuda con facturas, traiga la factura; eso es todo.">No ID, no proof of address, no proof of income for the pantry, the clothing room or the meal. Bring the bill for help with bills — that is all.</p>
+        </div>
+        <div>
+          <h3 data-en="No questions about status" data-es="No preguntamos por el estatus">No questions about status</h3>
+          <p data-en="We do not ask about immigration status, we do not record it, and we have never given information about anyone who came here to anyone who asked for it." data-es="No preguntamos por el estatus migratorio, no lo registramos y nunca hemos dado información sobre quien viene aquí a nadie que la haya pedido.">We do not ask about immigration status, we do not record it, and we have never given information about anyone who came here to anyone who asked for it.</p>
+        </div>
+        <div>
+          <h3 data-en="Nothing is expected of you" data-es="No se espera nada de usted">Nothing is expected of you</h3>
+          <p data-en="Nothing here requires you to attend anything, believe anything or sit through anything. If you want to talk about faith, ask — and if you do not, nobody will raise it." data-es="Nada de esto exige asistir a nada, creer nada ni aguantar nada. Si quiere hablar de fe, pregunte; y si no, nadie lo mencionará.">Nothing here requires you to attend anything, believe anything or sit through anything. If you want to talk about faith, ask — and if you do not, nobody will raise it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" data-reveal>
+    <div class="frame">
+      <p class="band__label" data-en="If we are not the right place" data-es="Si no somos el lugar indicado">If we are not the right place</p>
+      <h2 class="band__title" data-en="Who to call instead" data-es="A quién llamar">Who to call instead</h2>
+      <p class="band__lede" data-en="There is a lot we do not do. These are the people we would ring ourselves, and we will make the call with you if that is easier." data-es="Hay mucho que no hacemos. Estas son las personas a las que llamaríamos nosotros, y hacemos la llamada con usted si le resulta más fácil.">There is a lot we do not do. These are the people we would ring ourselves, and we will make the call with you if that is easier.</p>
+      <div data-partners></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="signoff">
+  <div class="frame">
+    <div class="signoff__grid">
+      <div>
+        <h2 data-en="The building" data-es="El edificio">The building</h2>
+        <p data-church="@address">&nbsp;</p>
+        <p style="margin-block-start:var(--s-2)">
+          <a class="with-icon" href="#" data-church-href="@maps" data-en="Directions and parking" data-es="Cómo llegar y estacionamiento">Directions and parking</a>
+        </p>
+      </div>
+      <div>
+        <h2 data-en="Reach a person" data-es="Hablar con alguien">Reach a person</h2>
+        <ul>
+          <li><a class="with-icon" href="#" data-church-href="@tel"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span data-church="phone">&nbsp;</span></a></li>
+          <li><a class="with-icon" href="#" data-church-href="@email"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><span data-church="email">&nbsp;</span></a></li>
+          <li data-en="Office: Tuesday to Thursday, 9–4" data-es="Oficina: martes a jueves, 9–4">Office: Tuesday to Thursday, 9–4</li>
+        </ul>
+      </div>
+      <div>
+        <h2 data-en="Sections" data-es="Secciones">Sections</h2>
+        <ul>
+          <li><a href="help.html" data-en="Get help" data-es="Buscar ayuda">Get help</a></li>
+          <li><a href="timetable.html" data-en="Opening hours" data-es="Horarios">Opening hours</a></li>
+          <li><a href="volunteer.html" data-en="Volunteer" data-es="Voluntariado">Volunteer</a></li>
+          <li><a href="give.html" data-en="Give" data-es="Donar">Give</a></li>
+          <li><a href="sundays.html" data-en="Sundays" data-es="Domingos">Sundays</a></li>
+          <li><a href="about.html" data-en="About us" data-es="Sobre nosotros">About us</a></li>
+          <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 data-en="Plainly" data-es="Con claridad">Plainly</h2>
+        <p data-en="Everything here is free. We never ask about immigration status. You do not have to be a Christian, or become one, to use anything on this site." data-es="Todo aquí es gratuito. Nunca preguntamos por el estatus migratorio. No hace falta ser cristiano, ni llegar a serlo, para usar nada de lo que ofrecemos.">Everything here is free. We never ask about immigration status. You do not have to be a Christian, or become one, to use anything on this site.</p>
+      </div>
+    </div>
+
+    <p class="signoff__note">
+      <span>&copy; <span data-church="@year">2026</span> <span data-church="name">&nbsp;</span></span>
+      <span>Commons — <span data-en="a free template from" data-es="una plantilla gratuita de">a free template from</span>
+        <a href="https://churchcreation.com/templates/commons/">ChurchCreation</a></span>
+    </p>
+  </div>
+</footer>
+
+<script type="module">
+  import { loadConfig, hydrate } from './core/js/config.js';
+  import { injectSchema } from './core/js/schema.js';
+  import { initTheme, initCurrentPage } from './core/js/ui.js';
+  import { initReveal } from './core/js/reveal.js';
+  import { initCommons } from './assets/commons.js';
+
+  const config = await loadConfig();
+  hydrate(config);
+  injectSchema(config);
+  initTheme();
+  initCurrentPage('.wayfinder a');
+  initCommons(config);
+  initReveal();
+</script>
+</body>
+</html>

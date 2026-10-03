@@ -1,0 +1,127 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   COMPONENTS — PRIMITIVES ONLY.
+
+   What lives here is what every family agrees on regardless of how its pages
+   are composed: a button, a form field, the theme toggle. Nothing that decides
+   what a PAGE looks like.
+
+   Site chrome — header, hero, sections, cards, footer — deliberately does NOT
+   live here. It used to, and the result was that a second family came out as a
+   re-skin of the first: same header, same hero, same section rhythm, different
+   fonts. A family now brings its own chrome (families/_chrome-classic.css, or
+   its own, as Movement does), which is the only way two templates end up
+   genuinely different rather than differently painted.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Buttons ────────────────────────────────────────────────────────────────
+   Two only. A church site with five button styles has none. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  padding: var(--s-3) var(--s-5);
+  min-block-size: 2.75rem;          /* WCAG 2.2 target size */
+  font-family: var(--font-ui);
+  font-size: var(--t-sm);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--accent);
+  color: var(--accent-fg);
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition);
+}
+.btn:hover { background: color-mix(in srgb, var(--accent) 84%, var(--fg)); }
+
+.btn--ghost {
+  background: transparent;
+  color: var(--fg);
+  border-color: var(--line-strong);
+}
+.btn--ghost:hover { background: var(--bg-sunken); border-color: var(--fg); }
+
+/* ── Connection card ────────────────────────────────────────────────────── */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: var(--s-4);
+}
+.form-field--full { grid-column: 1 / -1; }
+
+/* ── Icons ──────────────────────────────────────────────────────────────────
+   One inline <symbol> sprite per page (build/lib/icons.mjs). Sized in em so an
+   icon beside a label always matches that label, and stroked in currentColor so
+   it inherits whatever the surrounding text is doing — including on an --accent
+   ground, where a hard-coded colour would disappear. */
+.icon-sprite { position: absolute; inline-size: 0; block-size: 0; overflow: hidden; }
+
+.icon {
+  inline-size: 1em;
+  block-size: 1em;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: var(--icon-stroke, 1.5);
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  vertical-align: -0.125em;
+  display: inline-block;
+}
+/* Icons carrying a solid element (play, the contrast disc) declare their own
+   fill on the path; this keeps the outline from also being painted. */
+.icon--solid { fill: currentColor; stroke: none; }
+
+/* A link whose icon has to stay on the same line as its label, and whose
+   underline must not run under the icon. */
+.with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+/* ── Theme toggle ───────────────────────────────────────────────────────── */
+.theme-toggle {
+  display: inline-grid;
+  place-items: center;
+  inline-size: 2.75rem; block-size: 2.75rem;
+  background: transparent;
+  border: var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  color: var(--fg-muted);
+}
+.theme-toggle:hover { border-color: var(--fg); color: var(--fg); }
+.theme-toggle .icon {
+  inline-size: 1.15rem;
+  block-size: 1.15rem;
+  transition: transform var(--transition);
+}
+
+/* The disc inverts instead of the glyph changing. Both selectors are needed:
+   the media query carries the OS preference, and the explicit switch has to
+   beat it in both directions. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .icon { transform: rotate(180deg); }
+}
+:root[data-theme="dark"]  .theme-toggle .icon { transform: rotate(180deg); }
+:root[data-theme="light"] .theme-toggle .icon { transform: none; }
+
+/* ── Disclosure buttons: the glyph follows aria-expanded ──────────────────
+   Keyed on the ATTRIBUTE, not on a list of class names. The list version
+   (.nav-toggle, .contents-toggle, …) had to be extended by hand for every new
+   family, and Lantern's .porch-toggle was not on it — so its mobile menu
+   button rendered the hamburger and the close cross side by side, on every
+   page, at every width below 55rem. Anything carrying aria-expanded gets the
+   right glyph now without being enumerated here. */
+[aria-expanded] .icon--close { display: none; }
+[aria-expanded="true"] .icon--menu  { display: none; }
+[aria-expanded="true"] .icon--close { display: inline-block; }
+
+/* ── Accessibility: honour forced-colours mode ──────────────────────────── */
+@media (forced-colors: active) {
+  .btn, .card, .site-header { border: 1px solid CanvasText; }
+  .pathway { border-block-start-color: CanvasText; }
+}
