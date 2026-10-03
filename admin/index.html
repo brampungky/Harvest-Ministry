@@ -3,9 +3,41 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Content Manager</title>
+  <title>Content Manager - Gereja</title>
 </head>
 <body>
+  <!-- Script Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  
+  <!-- Konfigurasi langsung di dalam script untuk menghindari error 404 -->
+  <script>
+    CMS.init({
+      config: {
+        backend: {
+          name: 'github',
+          repo: 'brampungky/Harvest-Ministry',
+          branch: 'main'
+        },
+        media_folder: 'assets/images',
+        public_folder: '/assets/images',
+        collections: [
+          {
+            name: 'halaman',
+            label: 'Halaman Website',
+            files: [
+              {
+                file: 'index.html',
+                label: 'Halaman Utama (Home)',
+                name: 'index',
+                fields: [
+                  { label: 'Judul Utama', name: 'title', widget: 'string' }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    });
+  </script>
 </body>
 </html>
