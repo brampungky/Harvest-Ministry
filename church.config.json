@@ -1,6 +1,6 @@
 {
-  "name": "Commons Church",
-  "nameEs": "Iglesia Commons",
+  "name": "Harvest Ministry",
+  "nameEs": "Lembongan",
   "shortName": "Commons",
   "tagline": "A church that keeps its doors open on weekdays.",
   "denomination": "Non-denominational",
@@ -10,54 +10,34 @@
     "es"
   ],
   "use24HourClock": false,
-  "timezone": "America/New_York",
+  "timezone": "Indonesia/Bali",
   "liturgical": {
     "enabled": false
   },
   "address": {
-    "street": "418 North Ninth Street",
-    "city": "Reading",
-    "region": "PA",
-    "postal": "19604",
-    "country": "US"
+    "street": "Nusa Lembongan",
+    "city": "Klungkung",
+    "region": "Bali",
+    "postal": "80771",
+    "country": "ID"
   },
   "geo": {
-    "lat": 40.3459,
-    "lng": -75.9268
+    "lat": 115.444536,
+    "lng": -8.681437
   },
-  "phone": "(610) 555-0173",
+  "phone": "(62) 822-4714-4801",
   "email": "hola@example.org",
   "services": [
     {
       "day": "Sunday",
-      "time": "09:00",
+      "time": "20:00",
       "label": "Worship — English",
       "note": {
         "en": "Childcare for under-5s",
-        "es": "Cuidado de niños menores de 5 años"
-      },
-      "durationMinutes": 75
-    },
-    {
-      "day": "Sunday",
-      "time": "11:00",
-      "label": "Culto — Español",
-      "note": {
-        "en": "Childcare for under-5s",
-        "es": "Cuidado de niños menores de 5 años"
-      },
-      "durationMinutes": 90
-    },
-    {
-      "day": "Wednesday",
-      "time": "19:00",
-      "label": "Prayer / Oración",
-      "note": {
-        "en": "Bilingual, in the chapel",
-        "es": "Bilingüe, en la capilla"
+        "in": "ada Sekolah Minggu untuk anak di bawah 5 tahun"
       },
       "durationMinutes": 60
-    }
+    },
   ],
   "programmes": [
     {
@@ -65,11 +45,11 @@
       "kind": "food",
       "name": {
         "en": "Food pantry",
-        "es": "Despensa de alimentos"
+        "in": "pelayanan sembako"
       },
       "summary": {
-        "en": "Groceries for anyone who needs them, chosen from the shelves yourself.",
-        "es": "Comida para quien la necesite, elegida por usted mismo de los estantes."
+        "en": "Emergency Assistance.",
+        "in": "Bantuan Darurat."
       },
       "hours": [
         {
@@ -89,24 +69,24 @@
         }
       ],
       "where": {
-        "en": "Ninth Street door, ground floor",
-        "es": "Puerta de la calle Nueve, planta baja"
+        "en": "Jungut Batu, Nusa Lembongan Island",
+        "in": "Jungut Batu, Nusa Lembongan"
       },
       "eligibility": {
         "en": "No ID, no proof of address, no proof of income, and no questions about why you are here. Once a week.",
-        "es": "Sin identificación, sin comprobante de domicilio, sin comprobante de ingresos y sin preguntas sobre por qué está aquí. Una vez por semana."
+        "in": "siapa pun anda, bagaimana pun anda dari apa pun latar belakang anda bukan jadi ukuran buat kami."
       },
       "bring": {
         "en": "Bags, if you have them. We have some if you don't.",
-        "es": "Bolsas, si tiene. Tenemos algunas si no."
+        "in": "Silakan datang dengan hati terbuka untuk menerima Air Hidup."
       },
       "languages": [
         "English",
-        "Español"
+        "Bahasa"
       ],
       "cost": {
         "en": "Free",
-        "es": "Gratis"
+        "in": "Gratis"
       }
     },
     {
@@ -114,11 +94,11 @@
       "kind": "food",
       "name": {
         "en": "Wednesday hot meal",
-        "es": "Cena caliente del miércoles"
+        "in": "Suatu Pelayanan"
       },
       "summary": {
         "en": "A cooked meal, eaten at tables with other people. Everyone is welcome and nobody is counted.",
-        "es": "Una comida caliente, en mesas con otras personas. Todos son bienvenidos y nadie lleva la cuenta."
+        "in": "Una comida caliente, en mesas con otras personas. Todos son bienvenidos y nadie lleva la cuenta."
       },
       "hours": [
         {
