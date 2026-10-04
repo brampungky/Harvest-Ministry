@@ -35,9 +35,7 @@ export const formatAddress = (a = {}) =>
 
 /** Google Maps directions link — no API key, no embed, no third-party script. */
 export const mapsLink = (a = {}) =>
-  `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
-    [a.street, a.city, a.region, a.postal, a.country].filter(Boolean).join(' ')
-  )}`;
+  `https://www.google.com/maps/dir/?api=1&destination=-8.681278,115.439167`;
 
 function fillTemplate(node, item, config) {
   node.querySelectorAll('[data-item]').forEach((el) => {
