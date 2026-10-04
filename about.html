@@ -242,5 +242,28 @@
   initCommons(config);
   initReveal();
 </script>
+<script>
+  // Fungsi sederhana untuk menyembunyikan/menampilkan teks berdasarkan atribut lang di tag <html>
+  function updateLanguageDisplay() {
+    const currentLang = document.documentElement.lang || 'en';
+    document.querySelectorAll('[lang]').forEach(el => {
+      if (el.getAttribute('lang') === currentLang) {
+        el.style.display = 'block';
+      } else {
+        el.style.display = 'none';
+      }
+    });
+  }
+
+  // Jalankan saat halaman dimuat
+  document.addEventListener('DOMContentLoaded', updateLanguageDisplay);
+
+  // Pantau jika tombol bahasa diklik
+  document.querySelectorAll('.lang-toggle button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      setTimeout(updateLanguageDisplay, 50); // Beri jeda sedikit agar atribut lang di html sempat berubah
+    });
+  });
+</script>
 </body>
 </html>
