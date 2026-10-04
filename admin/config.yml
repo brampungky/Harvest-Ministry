@@ -6,11 +6,11 @@ media_folder: "images"
 public_folder: "/images"
 
 collections:
-  - name: "pages"
-  - label: "Pages"
+  - name: "content"
+    label: "Content"
     files:
       - file: "index.html"
-        label: "Home Page"
+        label: "Halaman Utama"
         name: "home"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
+          - { label: "Judul Utama", name: "title", widget: "string" }
