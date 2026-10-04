@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Give — Commons Church, Reading PA</title>
-<meta name="description" content="Give money, food or goods to Commons Church. What the shelves are short of this week, where the money goes, and how to drop things off.">
+<title>Give — Harvest Ministry, Nusa Lembongan</title>
+<meta name="description" content="Give money, food or goods to Harvest Ministry. What the shelves are short of this week, where the money goes, and how to drop things off.">
 
 <link rel="preload" href="./core/fonts/publicsans-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="./core/css/fonts.css">
@@ -24,7 +24,7 @@
 </head>
 
 <body>
-<a class="skip-link" href="#main" data-en="Skip to content" data-es="Ir al contenido">Skip to content</a>
+<a class="skip-link" href="#main" data-en="Skip to content" data-in="Lewati ke konten">Skip to content</a>
 <svg class="icon-sprite" aria-hidden="true" focusable="false" width="0" height="0">
   <symbol id="i-contrast" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z" fill="currentColor" stroke="none"/></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
@@ -46,21 +46,17 @@
   <symbol id="i-note" viewBox="0 0 24 24"><path d="M9 17V4l11-2v13"/><ellipse cx="6" cy="17.5" rx="3" ry="2.5"/><ellipse cx="17" cy="15.5" rx="3" ry="2.5"/></symbol>
 </svg>
 
-<!-- ── The masthead ──────────────────────────────────────────────────────
-     A painted sign in two tiers. The top one is the building — name, phone,
-     language. A phone number in the header is not decoration here: a lot of
-     the people this church serves would rather ring than read. -->
 <header class="masthead">
   <div class="masthead__bar">
     <div class="frame">
-      <a class="masthead__name" href="index.html" data-church="name">Commons Church</a>
+      <a class="masthead__name" href="index.html" data-church="name">Harvest Ministry</a>
       <div class="masthead__tools">
         <a class="masthead__phone" href="#" data-church-href="@tel">
           <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span data-church="phone">&nbsp;</span>
         </a>
-        <div class="lang-toggle" role="group" aria-label="Language / Idioma">
+        <div class="lang-toggle" role="group" aria-label="Language / Bahasa">
           <button type="button" data-lang="en" aria-pressed="true">EN</button>
-          <button type="button" data-lang="es" aria-pressed="false">ES</button>
+          <button type="button" data-lang="in" aria-pressed="false">IN</button>
         </div>
         <button class="theme-toggle" type="button" aria-label="Switch theme"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-contrast"/></svg></button>
       </div>
@@ -71,55 +67,53 @@
     <div class="frame">
       <button class="wayfinder-toggle" type="button" aria-expanded="false">
         <svg class="icon icon--menu" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg><svg class="icon icon--close" aria-hidden="true" focusable="false"><use href="#i-close"/></svg>
-        <span data-en="Menu" data-es="Menú">Menu</span>
+        <span data-en="Menu" data-in="Menu">Menu</span>
       </button>
       <ul>
-        <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
-        <li><a href="help.html" data-en="Get help" data-es="Buscar ayuda">Get help</a></li>
-        <li><a href="timetable.html" data-en="Opening hours" data-es="Horarios">Opening hours</a></li>
-        <li><a href="volunteer.html" data-en="Volunteer" data-es="Voluntariado">Volunteer</a></li>
-        <li><a href="give.html" data-en="Give" data-es="Donar">Give</a></li>
-        <li><a href="sundays.html" data-en="Sundays" data-es="Domingos">Sundays</a></li>
-        <li><a href="about.html" data-en="About us" data-es="Sobre nosotros">About us</a></li>
-        <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+        <li><a href="index.html" data-en="Home" data-in="Beranda">Home</a></li>
+        <li><a href="help.html" data-en="Get help" data-in="Minta Bantuan">Get help</a></li>
+        <li><a href="timetable.html" data-en="Opening hours" data-in="Jam Buka">Opening hours</a></li>
+        <li><a href="volunteer.html" data-en="Volunteer" data-in="Relawan">Volunteer</a></li>
+        <li><a href="give.html" data-en="Give" data-in="Pemberian">Give</a></li>
+        <li><a href="sundays.html" data-en="Sundays" data-in="Ibadah Minggu">Sundays</a></li>
+        <li><a href="about.html" data-en="About us" data-in="Tentang Kami">About us</a></li>
+        <li><a href="contact.html" data-en="Contact" data-in="Kontak">Contact</a></li>
       </ul>
     </div>
   </nav>
 </header>
 
-<!-- The live board: what is open, right now, in the church's own timezone. -->
 <div class="status">
   <div class="frame" data-status></div>
 </div>
 
 <main id="main">
 
-
   <div class="band pagehead">
     <div class="frame">
-      <p class="band__label" data-en="Give" data-es="Donar">Give</p>
-      <h1 data-en="Money, goods, or two hours" data-es="Dinero, artículos o dos horas">Money, goods, or two hours</h1>
-      <p class="pagehead__lede" data-en="All three are genuinely useful, and we would rather tell you which one is short this week than pretend they are equal." data-es="Las tres cosas sirven de verdad, y preferimos decirle cuál escasea esta semana que fingir que son iguales.">All three are genuinely useful, and we would rather tell you which one is short this week than pretend they are equal.</p>
+      <p class="band__label" data-en="Give" data-in="Pemberian">Give</p>
+      <h1 data-en="Money, goods, or two hours" data-in="Donasi dana, barang, atau waktu luang">Money, goods, or two hours</h1>
+      <p class="pagehead__lede" data-en="All three are genuinely useful, and we would rather tell you which one is short this week than pretend they are equal." data-in="Ketiganya sangat bermanfaat bagi pelayanan kami, dan kami ingin terbuka mengenai kebutuhan utama yang paling mendesak minggu ini.">All three are genuinely useful, and we would rather tell you which one is short this week than pretend they are equal.</p>
     </div>
   </div>
 
   <section class="band" data-reveal>
     <div class="frame">
-      <p class="band__label" data-en="Right now" data-es="Ahora mismo">Right now</p>
-      <h2 class="band__title" data-en="What the shelves are short of" data-es="Lo que falta en los estantes">What the shelves are short of</h2>
+      <p class="band__label" data-en="Right now" data-in="Saat Ini">Right now</p>
+      <h2 class="band__title" data-en="What the shelves are short of" data-in="Kebutuhan mendesak di rak pelayanan">What the shelves are short of</h2>
       <div data-needs></div>
       <p style="margin-block-start:var(--s-5);max-inline-size:var(--measure-wide)"
-         data-en="Drop-off is at the Ninth Street door, Tuesday to Thursday between nine and four. Please do not leave anything outside overnight — it gets taken or ruined, and then somebody has to clear it up." data-es="Las entregas se reciben en la puerta de la calle Nueve, de martes a jueves entre las nueve y las cuatro. Por favor no deje nada afuera durante la noche: se lo llevan o se arruina, y alguien tiene que recogerlo.">Drop-off is at the Ninth Street door, Tuesday to Thursday between nine and four. Please do not leave anything outside overnight — it gets taken or ruined, and then somebody has to clear it up.</p>
+         data-en="Drop-off is at the church entrance, Tuesday to Thursday between nine and four. Please do not leave anything outside overnight — it gets taken or ruined, and then somebody has to clear it up." data-in="Penyerahan barang dapat dilakukan di pintu masuk gereja, hari Selasa sampai Kamis antara pukul 09.00 hingga 16.00. Harap tidak meninggalkan barang di luar semalaman.">Drop-off is at the church entrance, Tuesday to Thursday between nine and four. Please do not leave anything outside overnight — it gets taken or ruined, and then somebody has to clear it up.</p>
     </div>
   </section>
 
   <section class="band band--ink" data-reveal>
     <div class="frame">
-      <p class="band__label" data-en="Money" data-es="Dinero">Money</p>
-      <h2 class="band__title" data-en="Where a dollar goes" data-es="A dónde va cada dólar">Where a dollar goes</h2>
+      <p class="band__label" data-en="Money" data-in="Dana">Money</p>
+      <h2 class="band__title" data-en="Where a dollar goes" data-in="Pemanfaatan donasi finansial">Where a dollar goes</h2>
       <div data-impact></div>
       <p style="margin-block-start:var(--s-6);opacity:.85;max-inline-size:var(--measure-wide)"
-         data-en="We buy through the regional food bank, which turns one dollar into roughly four dollars of groceries. Giving money almost always goes further than giving cans — but bring the cans anyway if that is easier." data-es="Compramos a través del banco de alimentos regional, que convierte un dólar en unos cuatro dólares de comida. Dar dinero casi siempre rinde más que dar latas; pero traiga las latas igualmente si le resulta más fácil.">We buy through the regional food bank, which turns one dollar into roughly four dollars of groceries. Giving money almost always goes further than giving cans — but bring the cans anyway if that is easier.</p>
+         data-en="We buy through reliable networks, which turns financial support into meaningful provisions. Giving money generally offers flexible purchasing power — but bring items directly if that is easier for you." data-in="Kami mengelola donasi finansial secara transparan untuk memenuhi kebutuhan komunitas secara optimal. Anda tetap dapat mendonasikan barang secara langsung jika itu lebih mudah bagi Anda.">We buy through reliable networks, which turns financial support into meaningful provisions. Giving money generally offers flexible purchasing power — but bring items directly if that is easier for you.</p>
     </div>
   </section>
 
@@ -127,16 +121,16 @@
     <div class="frame">
       <div class="plainly">
         <div>
-          <h3 data-en="By cheque or in person" data-es="Con cheque o en persona">By cheque or in person</h3>
-          <p data-en="Made out to the church, posted or handed in at the office. No processing fee, which is about three per cent more in the tin." data-es="A nombre de la iglesia, por correo o entregado en la oficina. Sin comisión de procesamiento, lo que significa cerca de un tres por ciento más para el fondo.">Made out to the church, posted or handed in at the office. No processing fee, which is about three per cent more in the tin.</p>
+          <h3 data-en="By transfer or in person" data-in="Transfer Bank atau Langsung">By cheque or in person</h3>
+          <p data-en="Contributions can be handed in at the office or processed via our direct support channels with minimal overhead." data-en="Kontribusi dapat diserahkan langsung di kantor gereja atau melalui saluran dukungan resmi kami dengan aman dan transparan.">Contributions can be handed in at the office or processed via our direct support channels with minimal overhead.</p>
         </div>
         <div>
-          <h3 data-en="Monthly" data-es="Mensual">Monthly</h3>
-          <p data-en="A standing order is what lets the pantry order stock in advance instead of buying week to week. Ask the office for the form." data-es="Una domiciliación permite que la despensa pida existencias por adelantado en lugar de comprar semana a semana. Pida el formulario en la oficina.">A standing order is what lets the pantry order stock in advance instead of buying week to week. Ask the office for the form.</p>
+          <h3 data-en="Monthly support" data-in="Dukungan Rutin Bulanan">Monthly</h3>
+          <p data-en="Regular giving helps us plan stock and provisions in advance instead of relying on week-to-week availability. Ask the office for details." data-in="Dukungan rutin membantu kami merencanakan persediaan bahan pokok dengan lebih baik. Silakan hubungi kantor untuk informasi lebih lanjut mengenai cara berpartisipasi.">A standing order is what lets the pantry order stock in advance instead of buying week to week. Ask the office for the form.</p>
         </div>
         <div>
-          <h3 data-en="If you use the pantry" data-es="Si usa la despensa">If you use the pantry</h3>
-          <p data-en="Please do not give money. Several people have tried and we have sent it back. Come and eat on a Wednesday instead." data-es="Por favor no done dinero. Varias personas lo han intentado y lo hemos devuelto. Venga a cenar un miércoles.">Please do not give money. Several people have tried and we have sent it back. Come and eat on a Wednesday instead.</p>
+          <h3 data-en="If you use the pantry" data-in="Bagi Penerima Manfaat Bantuan">If you use the pantry</h3>
+          <p data-en="Please do not worry about giving financial support. Our focus is to assist you. Come and join our community gatherings instead." data-in="Anda tidak perlu khawatir memberikan dukungan finansial jika Anda merupakan penerima manfaat. Fokus kami adalah membantu Anda; silakan bergabung dalam kegiatan komunitas kami.">Please do not give money. Several people have tried and we have sent it back. Come and eat on a Wednesday instead.</p>
         </div>
       </div>
     </div>
@@ -148,42 +142,40 @@
   <div class="frame">
     <div class="signoff__grid">
       <div>
-        <h2 data-en="The building" data-es="El edificio">The building</h2>
+        <h2 data-en="The building" data-in="Lokasi Bangunan">The building</h2>
         <p data-church="@address">&nbsp;</p>
         <p style="margin-block-start:var(--s-2)">
-          <a class="with-icon" href="#" data-church-href="@maps" data-en="Directions and parking" data-es="Cómo llegar y estacionamiento">Directions and parking</a>
+          <a class="with-icon" href="#" data-church-href="@maps" data-en="Directions and parking" data-in="Petunjuk arah dan parkir">Directions and parking</a>
         </p>
       </div>
       <div>
-        <h2 data-en="Reach a person" data-es="Hablar con alguien">Reach a person</h2>
+        <h2 data-en="Reach a person" data-in="Hubungi Kami">Reach a person</h2>
         <ul>
           <li><a class="with-icon" href="#" data-church-href="@tel"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span data-church="phone">&nbsp;</span></a></li>
           <li><a class="with-icon" href="#" data-church-href="@email"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><span data-church="email">&nbsp;</span></a></li>
-          <li data-en="Office: Tuesday to Thursday, 9–4" data-es="Oficina: martes a jueves, 9–4">Office: Tuesday to Thursday, 9–4</li>
+          <li data-en="Office: Tuesday to Thursday, 9–4" data-in="Kantor: Selasa sampai Kamis, 09.00–16.00">Office: Tuesday to Thursday, 9–4</li>
         </ul>
       </div>
       <div>
-        <h2 data-en="Sections" data-es="Secciones">Sections</h2>
+        <h2 data-en="Sections" data-in="Bagian">Sections</h2>
         <ul>
-          <li><a href="help.html" data-en="Get help" data-es="Buscar ayuda">Get help</a></li>
-          <li><a href="timetable.html" data-en="Opening hours" data-es="Horarios">Opening hours</a></li>
-          <li><a href="volunteer.html" data-en="Volunteer" data-es="Voluntariado">Volunteer</a></li>
-          <li><a href="give.html" data-en="Give" data-es="Donar">Give</a></li>
-          <li><a href="sundays.html" data-en="Sundays" data-es="Domingos">Sundays</a></li>
-          <li><a href="about.html" data-en="About us" data-es="Sobre nosotros">About us</a></li>
-          <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+          <li><a href="help.html" data-en="Get help" data-in="Minta Bantuan">Get help</a></li>
+          <li><a href="timetable.html" data-en="Opening hours" data-in="Jam Buka">Opening hours</a></li>
+          <li><a href="volunteer.html" data-en="Volunteer" data-in="Relawan">Volunteer</a></li>
+          <li><a href="give.html" data-en="Give" data-in="Pemberian">Give</a></li>
+          <li><a href="sundays.html" data-en="Sundays" data-in="Ibadah Minggu">Sundays</a></li>
+          <li><a href="about.html" data-en="About us" data-in="Tentang Kami">About us</a></li>
+          <li><a href="contact.html" data-en="Contact" data-in="Kontak">Contact</a></li>
         </ul>
       </div>
       <div>
-        <h2 data-en="Plainly" data-es="Con claridad">Plainly</h2>
-        <p data-en="Everything here is free. We never ask about immigration status. You do not have to be a Christian, or become one, to use anything on this site." data-es="Todo aquí es gratuito. Nunca preguntamos por el estatus migratorio. No hace falta ser cristiano, ni llegar a serlo, para usar nada de lo que ofrecemos.">Everything here is free. We never ask about immigration status. You do not have to be a Christian, or become one, to use anything on this site.</p>
+        <h2 data-en="Plainly" data-in="Secara Terbuka">Plainly</h2>
+        <p data-en="Everything here is free. We never ask about immigration status. You do not have to be a Christian, or become one, to use anything on this site." data-in="Semua layanan di sini gratis. Anda tidak harus menjadi seorang Kristen untuk menggunakan fasilitas yang tersedia.">Everything here is free. We never ask about immigration status. You do not have to be a Christian, or become one, to use anything on this site.</p>
       </div>
     </div>
 
     <p class="signoff__note">
       <span>&copy; <span data-church="@year">2026</span> <span data-church="name">&nbsp;</span></span>
-      <span>Commons — <span data-en="a free template from" data-es="una plantilla gratuita de">a free template from</span>
-        <a href="https://churchcreation.com/templates/commons/">ChurchCreation</a></span>
     </p>
   </div>
 </footer>

@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Opening hours — Commons Church, Reading PA</title>
-<meta name="description" content="Every programme at Commons Church by day of the week: pantry, meals, ESL, homework help, recovery, clothing room, legal clinic and worship.">
+<title>Opening hours — Harvest Ministry, Nusa Lembongan</title>
+<meta name="description" content="Every programme at Harvest Ministry by day of the week: pantry, meals, community support, recovery and worship.">
 
 <link rel="preload" href="./core/fonts/publicsans-var.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="./core/css/fonts.css">
@@ -24,7 +24,7 @@
 </head>
 
 <body>
-<a class="skip-link" href="#main" data-en="Skip to content" data-es="Ir al contenido">Skip to content</a>
+<a class="skip-link" href="#main" data-en="Skip to content" data-in="Lewati ke konten">Skip to content</a>
 <svg class="icon-sprite" aria-hidden="true" focusable="false" width="0" height="0">
   <symbol id="i-contrast" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z" fill="currentColor" stroke="none"/></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
@@ -46,21 +46,17 @@
   <symbol id="i-note" viewBox="0 0 24 24"><path d="M9 17V4l11-2v13"/><ellipse cx="6" cy="17.5" rx="3" ry="2.5"/><ellipse cx="17" cy="15.5" rx="3" ry="2.5"/></symbol>
 </svg>
 
-<!-- ── The masthead ──────────────────────────────────────────────────────
-     A painted sign in two tiers. The top one is the building — name, phone,
-     language. A phone number in the header is not decoration here: a lot of
-     the people this church serves would rather ring than read. -->
 <header class="masthead">
   <div class="masthead__bar">
     <div class="frame">
-      <a class="masthead__name" href="index.html" data-church="name">Commons Church</a>
+      <a class="masthead__name" href="index.html" data-church="name">Harvest Ministry</a>
       <div class="masthead__tools">
         <a class="masthead__phone" href="#" data-church-href="@tel">
           <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span data-church="phone">&nbsp;</span>
         </a>
-        <div class="lang-toggle" role="group" aria-label="Language / Idioma">
+        <div class="lang-toggle" role="group" aria-label="Language / Bahasa">
           <button type="button" data-lang="en" aria-pressed="true">EN</button>
-          <button type="button" data-lang="es" aria-pressed="false">ES</button>
+          <button type="button" data-lang="in" aria-pressed="false">IN</button>
         </div>
         <button class="theme-toggle" type="button" aria-label="Switch theme"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-contrast"/></svg></button>
       </div>
@@ -71,35 +67,33 @@
     <div class="frame">
       <button class="wayfinder-toggle" type="button" aria-expanded="false">
         <svg class="icon icon--menu" aria-hidden="true" focusable="false"><use href="#i-menu"/></svg><svg class="icon icon--close" aria-hidden="true" focusable="false"><use href="#i-close"/></svg>
-        <span data-en="Menu" data-es="Menú">Menu</span>
+        <span data-en="Menu" data-in="Menu">Menu</span>
       </button>
       <ul>
-        <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
-        <li><a href="help.html" data-en="Get help" data-es="Buscar ayuda">Get help</a></li>
-        <li><a href="timetable.html" data-en="Opening hours" data-es="Horarios">Opening hours</a></li>
-        <li><a href="volunteer.html" data-en="Volunteer" data-es="Voluntariado">Volunteer</a></li>
-        <li><a href="give.html" data-en="Give" data-es="Donar">Give</a></li>
-        <li><a href="sundays.html" data-en="Sundays" data-es="Domingos">Sundays</a></li>
-        <li><a href="about.html" data-en="About us" data-es="Sobre nosotros">About us</a></li>
-        <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+        <li><a href="index.html" data-en="Home" data-in="Beranda">Home</a></li>
+        <li><a href="help.html" data-en="Get help" data-in="Minta Bantuan">Get help</a></li>
+        <li><a href="timetable.html" data-en="Opening hours" data-in="Jam Buka">Opening hours</a></li>
+        <li><a href="volunteer.html" data-en="Volunteer" data-in="Relawan">Volunteer</a></li>
+        <li><a href="give.html" data-en="Give" data-in="Pemberian">Give</a></li>
+        <li><a href="sundays.html" data-en="Sundays" data-in="Ibadah Minggu">Sundays</a></li>
+        <li><a href="about.html" data-en="About us" data-in="Tentang Kami">About us</a></li>
+        <li><a href="contact.html" data-en="Contact" data-in="Kontak">Contact</a></li>
       </ul>
     </div>
   </nav>
 </header>
 
-<!-- The live board: what is open, right now, in the church's own timezone. -->
 <div class="status">
   <div class="frame" data-status></div>
 </div>
 
 <main id="main">
 
-
   <div class="band pagehead">
     <div class="frame">
-      <p class="band__label" data-en="Opening hours" data-es="Horarios">Opening hours</p>
-      <h1 data-en="The whole week on one board" data-es="Toda la semana en un solo tablero">The whole week on one board</h1>
-      <p class="pagehead__lede" data-en="Everything that happens in this building, including the services. Today is marked." data-es="Todo lo que ocurre en este edificio, incluidos los cultos. El día de hoy está marcado.">Everything that happens in this building, including the services. Today is marked.</p>
+      <p class="band__label" data-en="Opening hours" data-in="Jam Buka">Opening hours</p>
+      <h1 data-en="The whole week on one board" data-in="Jadwal lengkap selama seminggu">The whole week on one board</h1>
+      <p class="pagehead__lede" data-en="Everything that happens in this building, including the services. Today is marked." data-in="Semua kegiatan yang berlangsung di gedung ini, termasuk ibadah. Hari ini ditandai khusus.">Everything that happens in this building, including the services. Today is marked.</p>
     </div>
   </div>
 
@@ -113,16 +107,16 @@
     <div class="frame">
       <div class="plainly">
         <div>
-          <h3 data-en="When we close" data-es="Cuándo cerramos">When we close</h3>
-          <p data-en="Federal holidays, and any day the Reading schools close for weather. The phone message is updated by seven in the morning." data-es="Días feriados federales y cualquier día que las escuelas de Reading cierren por el clima. El mensaje del teléfono se actualiza antes de las siete de la mañana.">Federal holidays, and any day the Reading schools close for weather. The phone message is updated by seven in the morning.</p>
+          <h3 data-en="When we close" data-in="Waktu Tutup">When we close</h3>
+          <p data-en="Public holidays and special occasions. Updates are provided via our contact channels." data-in="Hari libur nasional dan acara khusus. Pembaruan informasi dapat dilihat melalui saluran kontak kami.">Public holidays and special occasions. Updates are provided via our contact channels.</p>
         </div>
         <div>
-          <h3 data-en="If you arrive late" data-es="Si llega tarde">If you arrive late</h3>
-          <p data-en="Knock anyway. Somebody is usually still there for half an hour afterwards and nobody has ever been turned away for being late." data-es="Toque de todos modos. Casi siempre hay alguien hasta media hora después y nunca hemos rechazado a nadie por llegar tarde.">Knock anyway. Somebody is usually still there for half an hour afterwards and nobody has ever been turned away for being late.</p>
+          <h3 data-en="If you arrive late" data-in="Jika Anda Datang Terlambat">If you arrive late</h3>
+          <p data-en="Knock anyway. Somebody is usually still there for half an hour afterwards and nobody has ever been turned away for being late." data-in="Ketuk saja pintunya. Biasanya masih ada orang yang berjaga dan tidak seorang pun pernah ditolak karena datang terlambat.">Knock anyway. Somebody is usually still there for half an hour afterwards and nobody has ever been turned away for being late.</p>
         </div>
         <div>
-          <h3 data-en="Getting in" data-es="Cómo entrar">Getting in</h3>
-          <p data-en="Step-free entrance on Ninth Street, lift to every floor, accessible toilets on the ground floor. The recovery group has its own door from the car park." data-es="Entrada sin escalones en la calle Nueve, ascensor a todos los pisos, baños accesibles en la planta baja. El grupo de recuperación tiene su propia puerta desde el estacionamiento.">Step-free entrance on Ninth Street, lift to every floor, accessible toilets on the ground floor. The recovery group has its own door from the car park.</p>
+          <h3 data-en="Getting in" data-en="Akses Masuk">Getting in</h3>
+          <p data-en="Step-free entrance, accessible facilities, and welcoming space for everyone in the community." data-in="Jalur masuk tanpa tangga, fasilitas yang ramah disabilitas, dan ruang terbuka bagi seluruh masyarakat.">Step-free entrance, accessible facilities, and welcoming space for everyone in the community.</p>
         </div>
       </div>
     </div>
@@ -134,42 +128,40 @@
   <div class="frame">
     <div class="signoff__grid">
       <div>
-        <h2 data-en="The building" data-es="El edificio">The building</h2>
+        <h2 data-en="The building" data-in="Lokasi Bangunan">The building</h2>
         <p data-church="@address">&nbsp;</p>
         <p style="margin-block-start:var(--s-2)">
-          <a class="with-icon" href="#" data-church-href="@maps" data-en="Directions and parking" data-es="Cómo llegar y estacionamiento">Directions and parking</a>
+          <a class="with-icon" href="#" data-church-href="@maps" data-en="Directions and parking" data-in="Petunjuk arah dan parkir">Directions and parking</a>
         </p>
       </div>
       <div>
-        <h2 data-en="Reach a person" data-es="Hablar con alguien">Reach a person</h2>
+        <h2 data-en="Reach a person" data-in="Hubungi Kami">Reach a person</h2>
         <ul>
           <li><a class="with-icon" href="#" data-church-href="@tel"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-phone"/></svg><span data-church="phone">&nbsp;</span></a></li>
           <li><a class="with-icon" href="#" data-church-href="@email"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><span data-church="email">&nbsp;</span></a></li>
-          <li data-en="Office: Tuesday to Thursday, 9–4" data-es="Oficina: martes a jueves, 9–4">Office: Tuesday to Thursday, 9–4</li>
+          <li data-en="Office: Tuesday to Thursday, 9–4" data-in="Kantor: Selasa sampai Kamis, 09.00–16.00">Office: Tuesday to Thursday, 9–4</li>
         </ul>
       </div>
       <div>
-        <h2 data-en="Sections" data-es="Secciones">Sections</h2>
+        <h2 data-en="Sections" data-in="Bagian">Sections</h2>
         <ul>
-          <li><a href="help.html" data-en="Get help" data-es="Buscar ayuda">Get help</a></li>
-          <li><a href="timetable.html" data-en="Opening hours" data-es="Horarios">Opening hours</a></li>
-          <li><a href="volunteer.html" data-en="Volunteer" data-es="Voluntariado">Volunteer</a></li>
-          <li><a href="give.html" data-en="Give" data-es="Donar">Give</a></li>
-          <li><a href="sundays.html" data-en="Sundays" data-es="Domingos">Sundays</a></li>
-          <li><a href="about.html" data-en="About us" data-es="Sobre nosotros">About us</a></li>
-          <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+          <li><a href="help.html" data-en="Get help" data-in="Minta Bantuan">Get help</a></li>
+          <li><a href="timetable.html" data-en="Opening hours" data-in="Jam Buka">Opening hours</a></li>
+          <li><a href="volunteer.html" data-en="Volunteer" data-in="Relawan">Volunteer</a></li>
+          <li><a href="give.html" data-en="Give" data-in="Pemberian">Give</a></li>
+          <li><a href="sundays.html" data-en="Sundays" data-in="Ibadah Minggu">Sundays</a></li>
+          <li><a href="about.html" data-en="About us" data-in="Tentang Kami">About us</a></li>
+          <li><a href="contact.html" data-en="Contact" data-in="Kontak">Contact</a></li>
         </ul>
       </div>
       <div>
-        <h2 data-en="Plainly" data-es="Con claridad">Plainly</h2>
-        <p data-en="Everything here is free. We never ask about immigration status. You do not have to be a Christian, or become one, to use anything on this site." data-es="Todo aquí es gratuito. Nunca preguntamos por el estatus migratorio. No hace falta ser cristiano, ni llegar a serlo, para usar nada de lo que ofrecemos.">Everything here is free. We never ask about immigration status. You do not have to be a Christian, or become one, to use anything on this site.</p>
+        <h2 data-en="Plainly" data-in="Secara Terbuka">Plainly</h2>
+        <p data-en="Everything here is free. We never ask about immigration status. You do not have to be a Christian, or become one, to use anything on this site." data-in="Semua layanan di sini gratis. Anda tidak harus menjadi seorang Kristen untuk menggunakan fasilitas yang tersedia.">Everything here is free. We never ask about immigration status. You do not have to be a Christian, or become one, to use anything on this site.</p>
       </div>
     </div>
 
     <p class="signoff__note">
       <span>&copy; <span data-church="@year">2026</span> <span data-church="name">&nbsp;</span></span>
-      <span>Commons — <span data-en="a free template from" data-es="una plantilla gratuita de">a free template from</span>
-        <a href="https://churchcreation.com/templates/commons/">ChurchCreation</a></span>
     </p>
   </div>
 </footer>

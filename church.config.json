@@ -1,13 +1,13 @@
 {
   "name": "Harvest Ministry",
   "nameEs": "Lembongan",
-  "shortName": "Commons",
+  "shortName": "Harvest",
   "tagline": "A church that keeps its doors open on weekdays.",
   "denomination": "Non-denominational",
   "locale": "en",
   "languages": [
     "en",
-    "es"
+    "in"
   ],
   "use24HourClock": false,
   "timezone": "Indonesia/Bali",
@@ -34,7 +34,7 @@
       "label": "Worship — English",
       "note": {
         "en": "Childcare for under-5s",
-        "in": "ada Sekolah Minggu untuk anak di bawah 5 tahun"
+        "in": "Tersedia penjagaan anak untuk usia di bawah 5 tahun"
       },
       "durationMinutes": 60
     }
@@ -45,11 +45,11 @@
       "kind": "food",
       "name": {
         "en": "Food pantry",
-        "in": "pelayanan sembako"
+        "in": "Pelayanan Sembako"
       },
       "summary": {
         "en": "Emergency Assistance.",
-        "in": "Bantuan Darurat."
+        "in": "Bantuan Darurat Kebutuhan Pangan."
       },
       "hours": [
         {
@@ -74,11 +74,11 @@
       },
       "eligibility": {
         "en": "No ID, no proof of address, no proof of income, and no questions about why you are here. Once a week.",
-        "in": "siapa pun anda, bagaimana pun anda dari apa pun latar belakang anda bukan jadi ukuran buat kami."
+        "in": "Terbuka bagi siapa saja yang membutuhkan bantuan tanpa prosedur yang rumit."
       },
       "bring": {
         "en": "Bags, if you have them. We have some if you don't.",
-        "in": "Silakan datang dengan hati terbuka untuk menerima Air Hidup."
+        "in": "Silakan membawa kantong belanja jika ada."
       },
       "languages": [
         "English",
@@ -94,11 +94,11 @@
       "kind": "food",
       "name": {
         "en": "Wednesday hot meal",
-        "in": "Suatu Pelayanan"
+        "in": "Makan Siang Hangat Hari Rabu"
       },
       "summary": {
         "en": "A cooked meal, eaten at tables with other people. Everyone is welcome and nobody is counted.",
-        "in": "Una comida caliente, en mesas con otras personas. Todos son bienvenidos y nadie lleva la cuenta."
+        "in": "Makanan hangat yang disajikan dan dinikmati bersama di meja makan. Semua orang dipersilakan."
       },
       "hours": [
         {
@@ -109,23 +109,23 @@
       ],
       "where": {
         "en": "Fellowship hall",
-        "es": "Salón de la iglesia"
+        "in": "Aula Persekutuan"
       },
       "eligibility": {
         "en": "Open to anyone. No sign-up.",
-        "es": "Abierto a todos. Sin inscripción."
+        "in": "Terbuka untuk siapa saja. Tanpa pendaftaran."
       },
       "bring": {
         "en": "Nothing at all.",
-        "es": "Nada."
+        "in": "Tidak perlu membawa apa pun."
       },
       "languages": [
         "English",
-        "Español"
+        "Bahasa"
       ],
       "cost": {
         "en": "Free",
-        "es": "Gratis"
+        "in": "Gratis"
       }
     },
     {
@@ -133,11 +133,11 @@
       "kind": "learning",
       "name": {
         "en": "English classes (ESL)",
-        "es": "Clases de inglés"
+        "in": "Kelas Bahasa Inggris (ESL)"
       },
       "summary": {
         "en": "Three levels, taught by trained volunteers, with free childcare in the next room.",
-        "es": "Tres niveles, con voluntarios capacitados y cuidado de niños gratis en la sala de al lado."
+        "in": "Tiga tingkat kelas yang diajar oleh relawan terlatih, lengkap dengan penitipan anak gratis di ruangan sebelah."
       },
       "hours": [
         {
@@ -153,23 +153,23 @@
       ],
       "where": {
         "en": "Rooms 2, 3 and 4, first floor",
-        "es": "Salones 2, 3 y 4, primer piso"
+        "in": "Ruangan 2, 3, dan 4, lantai satu"
       },
       "eligibility": {
         "en": "Any adult. You can start any week — you do not have to wait for a new term.",
-        "es": "Cualquier adulto. Puede empezar cualquier semana; no hay que esperar a un nuevo ciclo."
+        "in": "Untuk semua orang dewasa. Anda dapat mulai kapan saja tanpa harus menunggu semester baru."
       },
       "bring": {
         "en": "A notebook. Books are provided.",
-        "es": "Un cuaderno. Los libros los damos nosotros."
+        "in": "Buku catatan. Buku pelajaran disediakan."
       },
       "languages": [
         "English",
-        "Español"
+        "Bahasa"
       ],
       "cost": {
         "en": "Free",
-        "es": "Gratis"
+        "in": "Gratis"
       }
     },
     {
@@ -177,11 +177,11 @@
       "kind": "learning",
       "name": {
         "en": "Citizenship preparation",
-        "es": "Preparación para la ciudadanía"
+        "in": "Persiapan Administrasi & Kewarganegaraan"
       },
       "summary": {
         "en": "The civics questions, the interview, and the paperwork — worked through together.",
-        "es": "Las preguntas de civismo, la entrevista y los formularios, trabajados en grupo."
+        "in": "Materi wawancara, persiapan dokumen, dan formulir — dikerjakan bersama-sama."
       },
       "hours": [
         {
@@ -192,23 +192,23 @@
       ],
       "where": {
         "en": "Room 5",
-        "es": "Salón 5"
+        "in": "Ruangan 5"
       },
       "eligibility": {
         "en": "Anyone preparing for the naturalisation interview.",
-        "es": "Cualquier persona que se prepare para la entrevista de naturalización."
+        "in": "Siapa pun yang sedang mempersiapkan diri untuk proses administrasi atau wawancara."
       },
       "bring": {
         "en": "Your N-400 if you have started one.",
-        "es": "Su formulario N-400 si ya lo empezó."
+        "in": "Dokumen formulir Anda jika sudah memulainya."
       },
       "languages": [
-        "Español",
+        "Bahasa",
         "English"
       ],
       "cost": {
         "en": "Free",
-        "es": "Gratis"
+        "in": "Gratis"
       }
     },
     {
@@ -216,11 +216,11 @@
       "kind": "advice",
       "name": {
         "en": "Immigration legal clinic",
-        "es": "Clínica legal de inmigración"
+        "in": "Klinik Hukum & Konsultasi"
       },
       "summary": {
         "en": "A DOJ-accredited representative, by appointment. We do not give legal advice outside this clinic.",
-        "es": "Un representante acreditado por el DOJ, con cita. No damos asesoría legal fuera de esta clínica."
+        "in": "Perwakilan terakreditasi, dengan perjanjian. Kami tidak memberikan konsultasi hukum di luar klinik ini."
       },
       "hours": [
         {
@@ -229,29 +229,29 @@
           "end": "13:00",
           "note": {
             "en": "Second Saturday of the month",
-            "es": "Segundo sábado del mes"
+            "in": "Sabtu kedua setiap bulan"
           }
         }
       ],
       "where": {
         "en": "Office, second floor",
-        "es": "Oficina, segundo piso"
+        "in": "Kantor, lantai dua"
       },
       "eligibility": {
         "en": "By appointment only — call the office to book.",
-        "es": "Solo con cita — llame a la oficina para reservar."
+        "in": "Hanya dengan perjanjian — hubungi kantor untuk memesan jadwal."
       },
       "bring": {
         "en": "Every document you have, even if you are not sure it matters.",
-        "es": "Todos los documentos que tenga, aunque no esté seguro de que importen."
+        "in": "Semua dokumen yang Anda miliki, meskipun Anda ragu apakah dokumen tersebut penting."
       },
       "languages": [
-        "Español",
+        "Bahasa",
         "English"
       ],
       "cost": {
         "en": "Free",
-        "es": "Gratis"
+        "in": "Gratis"
       }
     },
     {
@@ -259,11 +259,11 @@
       "kind": "care",
       "name": {
         "en": "Recovery group",
-        "es": "Grupo de recuperación"
+        "in": "Kelompok Pemulihan"
       },
       "summary": {
         "en": "A twelve-step meeting, open, in the side room with its own entrance off the car park.",
-        "es": "Una reunión de doce pasos, abierta, en la sala lateral con entrada propia desde el estacionamiento."
+        "in": "Pertemuan dua belas langkah yang terbuka, bertempat di ruang samping dengan pintu masuk tersendiri."
       },
       "hours": [
         {
@@ -274,22 +274,22 @@
       ],
       "where": {
         "en": "Side room — separate entrance, no need to come through the building",
-        "es": "Sala lateral — entrada aparte, no hace falta entrar al edificio"
+        "in": "Ruang samping — pintu masuk terpisah, tidak perlu melalui gedung utama"
       },
       "eligibility": {
         "en": "Open meeting. Nobody takes names.",
-        "es": "Reunión abierta. Nadie toma nombres."
+        "in": "Pertemuan terbuka. Tidak ada pendataan nama."
       },
       "bring": {
         "en": "Nothing.",
-        "es": "Nada."
+        "in": "Tidak ada."
       },
       "languages": [
         "English"
       ],
       "cost": {
         "en": "Free",
-        "es": "Gratis"
+        "in": "Gratis"
       }
     },
     {
@@ -297,11 +297,11 @@
       "kind": "money",
       "name": {
         "en": "Emergency help with bills",
-        "es": "Ayuda de emergencia con facturas"
+        "in": "Bantuan Darurat Tagihan & Keperluan"
       },
       "summary": {
         "en": "Utility shut-offs, rent arrears, a car repair that stops you working. We pay the provider directly.",
-        "es": "Cortes de servicios, atrasos de renta, una reparación del auto que le impide trabajar. Pagamos directamente al proveedor."
+        "in": "Bantuan utilitas, sewa, atau perbaikan kendaraan yang mendesak. Pembayaran langsung ke penyedia layanan."
       },
       "hours": [
         {
@@ -322,23 +322,23 @@
       ],
       "where": {
         "en": "Office, second floor — by appointment",
-        "es": "Oficina, segundo piso — con cita"
+        "in": "Kantor, lantai dua — dengan perjanjian"
       },
       "eligibility": {
         "en": "Anyone in the 19601–19606 ZIP codes. We will ask to see the bill. We will not ask about your immigration status, ever.",
-        "es": "Cualquier persona en los códigos postales 19601–19606. Le pediremos ver la factura. Nunca preguntaremos por su estatus migratorio."
+        "in": "Terbuka bagi siapa saja yang memerlukan bantuan mendesak. Kami akan meminta melihat tagihan terkait."
       },
       "bring": {
         "en": "The bill or notice, and a phone number we can reach you on.",
-        "es": "La factura o el aviso, y un teléfono donde localizarle."
+        "in": "Tagihan atau pemberitahuan, serta nomor telepon yang dapat dihubungi."
       },
       "languages": [
-        "Español",
+        "Bahasa",
         "English"
       ],
       "cost": {
         "en": "Free",
-        "es": "Gratis"
+        "in": "Gratis"
       }
     },
     {
@@ -346,11 +346,11 @@
       "kind": "goods",
       "name": {
         "en": "Clothing room",
-        "es": "Ropero"
+        "in": "Ruang Pakaian Layak Pakai"
       },
       "summary": {
         "en": "Clean clothes and shoes for the whole family, sorted by size. Coats from October.",
-        "es": "Ropa y zapatos limpios para toda la familia, ordenados por talla. Abrigos desde octubre."
+        "in": "Pakaian dan sepatu bersih untuk seluruh keluarga, dikelompokkan berdasarkan ukuran."
       },
       "hours": [
         {
@@ -361,23 +361,23 @@
       ],
       "where": {
         "en": "Basement — lift available, ask at the door",
-        "es": "Sótano — hay ascensor, pregunte en la puerta"
+        "in": "Basement — tersedia lift, silakan tanyakan di pintu masuk"
       },
       "eligibility": {
         "en": "Anyone. Take what your family needs.",
-        "es": "Cualquiera. Tome lo que su familia necesite."
+        "in": "Siapa saja. Ambil apa yang dibutuhkan keluarga Anda."
       },
       "bring": {
         "en": "Nothing.",
-        "es": "Nada."
+        "in": "Tidak ada."
       },
       "languages": [
-        "Español",
+        "Bahasa",
         "English"
       ],
       "cost": {
         "en": "Free",
-        "es": "Gratis"
+        "in": "Gratis"
       }
     },
     {
@@ -385,11 +385,11 @@
       "kind": "learning",
       "name": {
         "en": "After-school homework help",
-        "es": "Ayuda con las tareas"
+        "in": "Bantuan Belajar & PR Sepulang Sekolah"
       },
       "summary": {
         "en": "Grades 1–8, term time, with a snack. Volunteers are background-checked and there are always two adults in the room.",
-        "es": "Grados 1–8, durante el curso escolar, con merienda. Los voluntarios tienen verificación de antecedentes y siempre hay dos adultos en la sala."
+        "in": "Untuk kelas 1–8, selama masa sekolah, disertai camilan. Relawan telah melalui pemeriksaan latar belakang."
       },
       "hours": [
         {
@@ -415,23 +415,23 @@
       ],
       "where": {
         "en": "Rooms 1 and 2",
-        "es": "Salones 1 y 2"
+        "in": "Ruangan 1 dan 2"
       },
       "eligibility": {
         "en": "Sign your child in on the first visit; it takes five minutes.",
-        "es": "Registre a su hijo en la primera visita; toma cinco minutos."
+        "in": "Daftarkan anak Anda pada kunjungan pertama; hanya memakan waktu lima menit."
       },
       "bring": {
         "en": "Their homework and their reading book.",
-        "es": "Sus tareas y su libro de lectura."
+        "in": "Buku PR dan buku bacaan mereka."
       },
       "languages": [
         "English",
-        "Español"
+        "Bahasa"
       ],
       "cost": {
         "en": "Free",
-        "es": "Gratis"
+        "in": "Gratis"
       }
     },
     {
@@ -439,11 +439,11 @@
       "kind": "goods",
       "name": {
         "en": "Diaper bank",
-        "es": "Banco de pañales"
+        "in": "Bank Popok & Perlengkapan Bayi"
       },
       "summary": {
         "en": "Diapers, wipes and formula, while stocks last each week.",
-        "es": "Pañales, toallitas y fórmula, mientras haya existencias cada semana."
+        "in": "Popok, tisu basah, dan susu formula selama persediaan masih ada setiap minggunya."
       },
       "hours": [
         {
@@ -454,23 +454,23 @@
       ],
       "where": {
         "en": "With the food pantry",
-        "es": "Junto a la despensa"
+        "in": "Bersamaan dengan pelayanan sembako"
       },
       "eligibility": {
         "en": "Bring the child's date of birth so we get the size right.",
-        "es": "Traiga la fecha de nacimiento del niño para darle la talla correcta."
+        "in": "Bawa tanggal lahir anak agar kami dapat memberikan ukuran yang tepat."
       },
       "bring": {
         "en": "Nothing.",
-        "es": "Nada."
+        "in": "Tidak ada."
       },
       "languages": [
-        "Español",
+        "Bahasa",
         "English"
       ],
       "cost": {
         "en": "Free",
-        "es": "Gratis"
+        "in": "Gratis"
       }
     }
   ],
@@ -479,7 +479,7 @@
       "id": "sort",
       "name": {
         "en": "Pantry sorting",
-        "es": "Ordenar la despensa"
+        "in": "Menyortir Sembako"
       },
       "day": "Monday",
       "start": "09:00",
@@ -488,14 +488,14 @@
       "filled": 4,
       "note": {
         "en": "Lifting up to 20lb. Standing.",
-        "es": "Levantar hasta 20 libras. De pie."
+        "in": "Mengangkat hingga 10 kg. Berdiri."
       }
     },
     {
       "id": "distribute",
       "name": {
         "en": "Pantry distribution",
-        "es": "Repartir la despensa"
+        "in": "Distribusi Sembako"
       },
       "day": "Tuesday",
       "start": "09:30",
@@ -504,14 +504,14 @@
       "filled": 8,
       "note": {
         "en": "Spanish speakers especially welcome.",
-        "es": "Se agradece especialmente quien hable español."
+        "in": "Penutur Bahasa Indonesia/Inggris sangat dipersilakan."
       }
     },
     {
       "id": "childcare",
       "name": {
         "en": "ESL childcare",
-        "es": "Cuidado de niños en clases de inglés"
+        "in": "Penitipan Anak ESL"
       },
       "day": "Monday",
       "start": "18:15",
@@ -520,14 +520,14 @@
       "filled": 1,
       "note": {
         "en": "Background check required — we pay for it.",
-        "es": "Se requiere verificación de antecedentes; nosotros la pagamos."
+        "in": "Diperlukan pemeriksaan latar belakang — biaya ditanggung oleh kami."
       }
     },
     {
       "id": "cook",
       "name": {
         "en": "Wednesday meal — kitchen",
-        "es": "Cena del miércoles — cocina"
+        "in": "Makan Rabu — Dapur"
       },
       "day": "Wednesday",
       "start": "15:00",
@@ -536,14 +536,14 @@
       "filled": 3,
       "note": {
         "en": "Food handler card provided if you don't have one.",
-        "es": "Le damos el certificado de manejo de alimentos si no lo tiene."
+        "in": "Sertifikat penanganan makanan disediakan jika Anda belum memilikinya."
       }
     },
     {
       "id": "drive",
       "name": {
         "en": "Food bank collection",
-        "es": "Recoger del banco de alimentos"
+        "in": "Pengambilan Bank Makanan"
       },
       "day": "Thursday",
       "start": "07:00",
@@ -552,14 +552,14 @@
       "filled": 0,
       "note": {
         "en": "Van provided. Clean licence needed.",
-        "es": "Camioneta incluida. Se necesita licencia sin infracciones."
+        "in": "Kendaraan disediakan. Diperlukan SIM yang bersih."
       }
     },
     {
       "id": "tutor",
       "name": {
         "en": "Homework help tutor",
-        "es": "Tutor de tareas"
+        "in": "Tutor Bantuan PR"
       },
       "day": "Tuesday",
       "start": "15:15",
@@ -568,7 +568,7 @@
       "filled": 5,
       "note": {
         "en": "No teaching experience needed.",
-        "es": "No se necesita experiencia docente."
+        "in": "Tidak memerlukan pengalaman mengajar sebelumnya."
       }
     }
   ],
@@ -579,44 +579,44 @@
         "value": "41,200",
         "label": {
           "en": "meals given out",
-          "es": "comidas entregadas"
+          "in": "makanan dibagikan"
         },
         "note": {
           "en": "pantry and Wednesday meal combined",
-          "es": "despensa y cena del miércoles"
+          "in": "gabungan sembako dan makan hari Rabu"
         }
       },
       {
         "value": "3,180",
         "label": {
           "en": "households served",
-          "es": "hogares atendidos"
+          "in": "keluarga dilayani"
         },
         "note": {
           "en": "about one in nine in our ZIP codes",
-          "es": "cerca de uno de cada nueve en nuestros códigos postales"
+          "in": "sekitar satu dari sembilan di wilayah kami"
         }
       },
       {
         "value": "96",
         "label": {
           "en": "people finished an English course",
-          "es": "personas terminaron un curso de inglés"
+          "in": "orang menyelesaikan kursus bahasa"
         },
         "note": {
           "en": "and 11 passed the citizenship interview",
-          "es": "y 11 aprobaron la entrevista de ciudadanía"
+          "in": "dan 11 lulus ujian atau wawancara administratif"
         }
       },
       {
         "value": "214",
         "label": {
           "en": "volunteers",
-          "es": "voluntarios"
+          "in": "relawan"
         },
         "note": {
           "en": "about a third are not members here",
-          "es": "cerca de un tercio no son miembros de la iglesia"
+          "in": "sekitar sepertiganya bukan anggota jemaat di sini"
         }
       }
     ]
@@ -626,7 +626,7 @@
       "name": "211 Helpline",
       "what": {
         "en": "Anything we don't do — housing, utilities, health, crisis.",
-        "es": "Todo lo que no hacemos: vivienda, servicios, salud, crisis."
+        "in": "Segala hal di luar layanan kami — perumahan, utilitas, kesehatan, krisis."
       },
       "contact": "Dial 211"
     },
@@ -634,7 +634,7 @@
       "name": "Helping Harvest Food Bank",
       "what": {
         "en": "The regional food bank we collect from, and a list of every other pantry in the county.",
-        "es": "El banco de alimentos regional del que recogemos, y la lista de las demás despensas del condado."
+        "in": "Bank pangan regional tempat kami mengambil suplai, serta daftar bank pangan lainnya."
       },
       "contact": "helpingharvest.org"
     },
@@ -642,7 +642,7 @@
       "name": "MidPenn Legal Services",
       "what": {
         "en": "Free civil legal aid — evictions, benefits, family law.",
-        "es": "Asistencia legal civil gratuita: desalojos, beneficios, derecho familiar."
+        "in": "Bantuan hukum perdata gratis — penggusuran, tunjangan, hukum keluarga."
       },
       "contact": "(610) 555-0190"
     },
@@ -650,7 +650,7 @@
       "name": "Safe Berks",
       "what": {
         "en": "Domestic violence and sexual assault. 24-hour hotline, confidential.",
-        "es": "Violencia doméstica y agresión sexual. Línea de 24 horas, confidencial."
+        "in": "Kekerasan dalam rumah tangga dan pelecehan seksual. Layanan 24 jam, rahasia."
       },
       "contact": "(610) 555-0111"
     },
@@ -658,7 +658,7 @@
       "name": "Berks Community Health Center",
       "what": {
         "en": "Medical and dental on a sliding scale, regardless of insurance or status.",
-        "es": "Servicios médicos y dentales con tarifa ajustada, sin importar seguro ni estatus."
+        "in": "Layanan medis dan gigi dengan biaya terjangkau tanpa memandang status."
       },
       "contact": "(610) 555-0155"
     }
@@ -668,44 +668,44 @@
       "name": "Pastor Danilo Reyes",
       "role": {
         "en": "Pastor",
-        "es": "Pastor"
+        "in": "Pendeta"
       },
       "note": {
         "en": "Preaches both services. Speaks Spanish, English and enough Haitian Creole to get by.",
-        "es": "Predica en ambos cultos. Habla español, inglés y suficiente creole haitiano para entenderse."
+        "in": "Melayani khotbah di setiap ibadah. Fasih berbahasa Indonesia dan Inggris."
       }
     },
     {
       "name": "Marisol Peña",
       "role": {
         "en": "Director of community services",
-        "es": "Directora de servicios comunitarios"
+        "in": "Direktur Layanan Masyarakat"
       },
       "note": {
         "en": "Runs the pantry, the clothing room and the benevolence fund. Thirty years in this neighbourhood.",
-        "es": "Dirige la despensa, el ropero y el fondo de ayuda. Treinta años en este barrio."
+        "in": "Mengelola pelayanan sembako, ruang pakaian, dan dana bantuan sosial."
       }
     },
     {
       "name": "Grace Achebe",
       "role": {
         "en": "ESL coordinator",
-        "es": "Coordinadora de clases de inglés"
+        "in": "Koordinator ESL"
       },
       "note": {
         "en": "Trains the tutors and places new students in the right level.",
-        "es": "Capacita a los tutores y ubica a los estudiantes nuevos en el nivel correcto."
+        "in": "Melatih para tutor dan menempatkan siswa baru pada tingkat kelas yang sesuai."
       }
     },
     {
       "name": "Tom Brody",
       "role": {
         "en": "Volunteer coordinator",
-        "es": "Coordinador de voluntarios"
+        "in": "Koordinator Relawan"
       },
       "note": {
         "en": "The person to talk to about shifts, background checks and the van.",
-        "es": "La persona con quien hablar sobre turnos, verificaciones y la camioneta."
+        "in": "Narahubung untuk urusan jadwal shift, pemeriksaan latar belakang, dan kendaraan operasional."
       }
     }
   ],
@@ -717,23 +717,23 @@
   "needs": [
     {
       "en": "Rice, dried beans, cooking oil",
-      "es": "Arroz, frijoles secos, aceite"
+      "in": "Beras, kacang kering, minyak goreng"
     },
     {
       "en": "Diapers sizes 4, 5 and 6",
-      "es": "Pañales tallas 4, 5 y 6"
+      "in": "Popok ukuran 4, 5, dan 6"
     },
     {
       "en": "Children's winter coats",
-      "es": "Abrigos de invierno para niños"
+      "in": "Jaket hangat anak-anak"
     },
     {
       "en": "Bus passes",
-      "es": "Pases de autobús"
+      "in": "Tiket atau kartu transportasi"
     },
     {
       "en": "Reusable shopping bags",
-      "es": "Bolsas reutilizables"
+      "in": "Tas belanja pakai ulang"
     }
   ],
   "livestream": {
