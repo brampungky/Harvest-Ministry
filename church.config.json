@@ -22,8 +22,8 @@
     "country": "ID"
   },
   "geo": {
-    "lat": 115.439167,
-    "lng": -8.681278
+    "lat": -8.681278,
+    "lng": 115.439167
   },
   "phone": "(62) 822-4714-4801",
   "email": "hola@example.org",
@@ -740,6 +740,6 @@
     "channelUrl": "",
     "archiveUrl": "",
     "liveEmbed": ""
-  },
+  },  
   "socials": []
 }
