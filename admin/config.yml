@@ -15,11 +15,18 @@ collections:
         fields:
           - { label: "Judul Utama", name: "title", widget: "string" }
           - { label: "Deskripsi", name: "description", widget: "text" }
-      
-      # Tambahkan baris di bawah ini jika ada halaman lain, contoh: tentang.html, kontak.html, dll.
-      # - file: "tentang.html"
-      #   label: "Tentang Kami"
-      #   name: "about"
-      #   fields:
-      #     - { label: "Judul", name: "title", widget: "string" }
-      #     - { label: "Konten", name: "body", widget: "markdown" }
+
+  # Koleksi untuk Rincian Kolekte Mingguan
+  - name: "kolekte"
+    label: "Kolekte Mingguan"
+    folder: "content/kolekte" # Folder tempat menyimpan data kolekte di repository Anda
+    create: true # Memungkinkan staf membuat laporan minggu baru
+    slug: "{{year}}-{{month}}-{{day}}-kolekte"
+    fields:
+      - { label: "Judul / Tanggal Minggu", name: "title", widget: "string" }
+      - { label: "Tanggal Ibadah", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Kolekte Ibadah 1", name: "kolekte_1", widget: "string", required: false }
+      - { label: "Kolekte Ibadah 2", name: "kolekte_2", widget: "string", required: false }
+      - { label: "Persepuluhan", name: "persepuluhan", widget: "string", required: false }
+      - { label: "Pembangunan", name: "pembangunan", widget: "string", required: false },
+      - { label: "Catatan Tambahan", name: "body", widget: "markdown", required: false }
