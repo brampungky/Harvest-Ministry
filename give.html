@@ -24,11 +24,6 @@
 </head>
 
 <body>
-
-<div id="daftar-kolekte">
-  <p>Memuat data kolekte...</p>
-</div>
-  
 <a class="skip-link" href="#main" data-en="Skip to content" data-in="Lewati ke konten">Skip to content</a>
 <svg class="icon-sprite" aria-hidden="true" focusable="false" width="0" height="0">
   <symbol id="i-contrast" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18Z" fill="currentColor" stroke="none"/></symbol>
@@ -92,6 +87,79 @@
   <div class="frame" data-status></div>
 </div>
 
+<!-- Tempat tabel kolekte akan dimuat secara otomatis -->
+<div class="table-responsive">
+  <table class="table" id="tabel-kolekte">
+    <thead>
+      <tr>
+        <th>Tanggal / Ibadah</th>
+        <th>Kolekte Ibadah 1</th>
+        <th>Kolekte Ibadah 2</th>
+        <th>Persepuluhan</th>
+        <th>Pembangunan</th>
+      </tr>
+    </thead>
+    <tbody id="isi-kolekte">
+      <tr>
+        <td colspan="5" style="text-align: center;">Memuat laporan kolekte...</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Skrip JavaScript untuk mengambil data JSON dari folder content/kolekte/ -->
+<script>
+  async function muatKolekte() {
+    const tbody = document.getElementById('isi-kolekte');
+    try {
+      // Karena GitHub Pages / Netlify statis tidak bisa membaca folder secara langsung, 
+      // kita bisa mengambil daftar file melalui API GitHub publik atau file indeks manifes.
+      // Cara paling stabil untuk HTML statis adalah dengan menggunakan endpoint API repo Anda:
+      const response = await fetch('https://api.github.com/repos/NAMA_USER_GITHUB/NAMA_REPO/contents/content/kolekte');
+      
+      if (!response.ok) {
+        throw new Error('Gagal memuat data dari repositori.');
+      }
+      
+      const files = await response.json();
+      
+      // Filter hanya file json
+      const jsonFiles = files.filter(file => file.name.endsWith('.json'));
+      
+      if (jsonFiles.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align: center;">Belum ada laporan kolekte.</td></tr>';
+        return;
+      }
+
+      // Urutkan dari yang terbaru (berdasarkan nama file/tanggal)
+      jsonFiles.sort((a, b) => b.name.localeCompare(a.name));
+
+      tbody.innerHTML = ''; // Kosongkan teks loading
+
+      for (const file of jsonFiles) {
+        const fileRes = await fetch(file.download_url);
+        const data = await fileRes.json();
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><strong>${data.title || '-'}</strong><br><small>${data.date || ''}</small></td>
+          <td>Rp ${data.kolekte_1 || '0'}</td>
+          <td>Rp ${data.kolekte_2 || '0'}</td>
+          <td>Rp ${data.persepuluhan || '0'}</td>
+          <td>Rp ${data.pembangunan || '0'}</td>
+        `;
+        tbody.appendChild(tr);
+      }
+    } catch (error) {
+      console.error(error);
+      tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; color: red;">Gagal memuat laporan kolekte. Pastikan repository bersifat publik.</td></tr>';
+    }
+  }
+
+  // Jalankan fungsi saat halaman selesai dimuat
+  document.addEventListener('DOMContentLoaded', muatKolekte);
+</script>
+  
 <main id="main">
 
   <div class="band pagehead">
