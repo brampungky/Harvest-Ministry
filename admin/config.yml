@@ -6,11 +6,20 @@ media_folder: "images"
 public_folder: "/images"
 
 collections:
-  - name: "content"
-    label: "Content"
+  - name: "pages"
+    label: "Halaman Website"
     files:
       - file: "index.html"
-        label: "Halaman Utama"
+        label: "Beranda (Home)"
         name: "home"
         fields:
           - { label: "Judul Utama", name: "title", widget: "string" }
+          - { label: "Deskripsi", name: "description", widget: "text" }
+      
+      # Tambahkan baris di bawah ini jika ada halaman lain, contoh: tentang.html, kontak.html, dll.
+      # - file: "tentang.html"
+      #   label: "Tentang Kami"
+      #   name: "about"
+      #   fields:
+      #     - { label: "Judul", name: "title", widget: "string" }
+      #     - { label: "Konten", name: "body", widget: "markdown" }
