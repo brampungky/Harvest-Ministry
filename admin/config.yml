@@ -17,15 +17,15 @@ collections:
           - { label: "Deskripsi", name: "description", widget: "text" }
 
   - name: "kolekte"
-  label: "Kolekte Mingguan"
-  folder: "content/kolekte"
-  create: true
-  extension: "json" # Menyimpan data sebagai file JSON agar mudah dibaca JavaScript
-  slug: "{{year}}-{{month}}-{{day}}"
-  fields:
-    - { label: "Judul / Tanggal Minggu", name: "title", widget: "string" }
-    - { label: "Tanggal Ibadah", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
-    - { label: "Kolekte Ibadah 1", name: "kolekte_1", widget: "string", required: false }
-    - { label: "Kolekte Ibadah 2", name: "kolekte_2", widget: "string", required: false }
-    - { label: "Persepuluhan", name: "persepuluhan", widget: "string", required: false }
-    - { label: "Pembangunan", name: "pembangunan", widget: "string", required: false }
+    label: "Kolekte Mingguan"
+    folder: "content/kolekte"
+    create: true
+    extension: "json"
+    slug: "{{year}}-{{month}}-{{day}}"
+    fields:
+      - { label: "Judul / Tanggal Minggu", name: "title", widget: "string" }
+      - { label: "Tanggal Ibadah", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Kolekte Ibadah 1", name: "kolekte_1", widget: "string", required: false }
+      - { label: "Kolekte Ibadah 2", name: "kolekte_2", widget: "string", required: false }
+      - { label: "Persepuluhan", name: "persepuluhan", widget: "string", required: false }
+      - { label: "Pembangunan", name: "pembangunan", widget: "string", required: false }
