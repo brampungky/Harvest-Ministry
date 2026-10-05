@@ -88,64 +88,68 @@
 </div>
 
 <!-- Tempat tabel kolekte akan dimuat secara otomatis -->
-<div class="table-responsive">
-  <table class="table" id="tabel-kolekte">
-    <thead>
-      <tr>
-        <th>Tanggal / Ibadah</th>
-        <th>Kolekte Ibadah 1</th>
-        <th>Kolekte Ibadah 2</th>
-        <th>Persepuluhan</th>
-        <th>Pembangunan</th>
-      </tr>
-    </thead>
-    <tbody id="isi-kolekte">
-      <tr>
-        <td colspan="5" style="text-align: center;">Memuat laporan kolekte...</td>
-      </tr>
-    </tbody>
-  </table>
+<!-- Tempat tabel kolekte -->
+<div class="table-responsive" style="margin-block: var(--s-6);">
+  <div class="frame">
+    <h2 style="margin-block-end: var(--s-3);" data-en="Weekly Offering Report" data-in="Laporan Kolekte Mingguan">Laporan Kolekte Mingguan</h2>
+    <table class="table" id="tabel-kolekte">
+      <thead>
+        <tr>
+          <th>Tanggal / Ibadah</th>
+          <th>Kolekte Ibadah 1</th>
+          <th>Kolekte Ibadah 2</th>
+          <th>Persepuluhan</th>
+          <th>Pembangunan</th>
+        </tr>
+      </thead>
+      <tbody id="isi-kolekte">
+        <tr>
+          <td colspan="5" style="text-align: center;">Memuat laporan kolekte...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
 <script>
   async function muatKolekte() {
     const tbody = document.getElementById('isi-kolekte');
     
-    // Karena kita tahu format nama file dari Decap CMS adalah YYYY-MM-DD.json
-    // Kita bisa mencoba mengambil beberapa tanggal terakhir atau menggunakan daftar file manual/otomatis.
-    // Sebagai contoh, mari kita ambil file berdasarkan tanggal hari ini atau minggu-minggu terdekat yang diinput.
+    // Daftar tanggal laporan yang Anda buat via CMS. 
+    // Sesuaikan tanggalnya (format: YYYY-MM-DD) setiap kali membuat laporan baru.
+    const daftarTanggal = [
+      "2026-10-05"
+    ]; 
     
-    try {
-      // Cara paling ampuh di hosting statis (Netlify/Vercel): 
-      // Kita buat file daftar atau ambil langsung file JSON berdasarkan nama yang diinput di CMS.
-      // Contoh jika file bernama "2026-10-05.json" (sesuaikan dengan tanggal laporan Anda di folder content/kolekte/):
-      
-      const daftarTanggal = [
-        "2026-10-05", 
-        "2026-09-28",
-        "2026-09-21"
-      ]; // Tambahkan tanggal laporan di sini setiap kali Anda membuat laporan baru via CMS
-      
-      let htmlContent = '';
-      
-      for (const tgl of daftarTanggal) {
-        try {
-          const res = await fetch(`/content/kolekte/${tgl}.json`);
-          if (res.ok) {
-            const data = await res.json();
-            htmlContent += `
-              <tr>
-                <td><strong>${data.title || tgl}</strong><br><small>${data.date || tgl}</small></td>
-                <td>Rp ${data.kolekte_1 || '0'}</td>
-                <td>Rp ${data.kolekte_2 || '0'}</td>
-                <td>Rp ${data.persepuluhan || '0'}</td>
-                <td>Rp ${data.pembangunan || '0'}</td>
-              </tr>
-            `;
-          }
-        } catch (e) {
-          console.
-  // Jalankan fungsi saat halaman selesai dimuat
+    let htmlContent = '';
+    
+    for (const tgl of daftarTanggal) {
+      try {
+        const res = await fetch(`content/kolekte/${tgl}.json`);
+        if (res.ok) {
+          const data = await res.json();
+          htmlContent += `
+            <tr>
+              <td><strong>${data.title || tgl}</strong><br><small>${data.date || tgl}</small></td>
+              <td>Rp ${data.kolekte_1 || '0'}</td>
+              <td>Rp ${data.kolekte_2 || '0'}</td>
+              <td>Rp ${data.persepuluhan || '0'}</td>
+              <td>Rp ${data.pembangunan || '0'}</td>
+            </tr>
+          `;
+        }
+      } catch (e) {
+        console.error("Gagal memuat file:", tgl);
+      }
+    }
+    
+    if (htmlContent) {
+      tbody.innerHTML = htmlContent;
+    } else {
+      tbody.innerHTML = '<tr><td colspan="5" style="text-align: center;">Belum ada laporan kolekte yang cocok.</td></tr>';
+    }
+  }
+
   document.addEventListener('DOMContentLoaded', muatKolekte);
 </script>
   
